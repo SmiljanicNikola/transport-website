@@ -1,0 +1,150 @@
+.faq-section {
+    width: 70%;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 0.1); 
+    /* opacity: 999; */
+}
+
+.faq-section h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: white;
+    font-size: 32px;
+}
+
+.card {
+    background: #fff;
+    color: #333;
+    margin: 15rem auto;
+    width: 90%;
+    max-width: 50rem;
+    min-height: 30rem;
+    border-radius: 2rem;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    transform: translateY(-55%);
+}
+.hero .img {
+    filter: drop-shadow(0rem 1.5rem rgba(0,0,0,0.1));
+    transition: 0.3s ease-out;
+}
+.card:hover .img {
+    filter: drop-shadow(0rem 2.5rem rgba(0,0,0,0.1));
+}
+
+.title {
+    text-align: center;
+    font-size: 5rem;
+    padding: 1rem;
+}
+
+.acc-container {
+    padding: 2rem 1rem;
+}
+.acc-btn {
+    width: 100%;
+    padding: 0.4rem 2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background: inherit;
+    border: none;
+    outline: none;
+    text-align: center;
+    transition: all 0.5s linear;
+    /* border: 1px solid white; */
+    
+}
+
+.acc-btn i{
+    color: #007BFF;
+    margin-left: 10px;
+}
+
+.acc-btn:after {
+    float: right;
+    transition: all 0.3s linear;
+}
+.acc-btn.is-open:after {
+    transform: rotate(90deg);
+}
+.acc-btn:hover, .acc-btn.is-open {
+    font-weight: bold;
+    background-color: rgba(144, 144, 144, 0.075);
+
+}
+
+
+.acc-content {
+    max-height: 0;
+    color: rgba(0,0,0,0.75);
+    font-size: 1.3rem;
+    margin: 0 2rem;
+    padding-left: 1rem;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    border: 1px solid #444;
+    margin-bottom: 10px;
+    text-align: center;
+
+}
+
+.credit {
+    text-align: center;
+    padding: 1rem;
+}
+.credit a {
+    text-decoration: wavy underline;
+    color: dodgerblue;
+}
+
+
+/* @media screen and (min-width: 480px) {
+
+    .faq-section h1 {
+       font-size: 22px;
+    }
+    .acc-btn{
+        font-size: 0.7rem;
+        padding: 0.1rem 0.1rem;
+        overflow :scroll;
+
+    }
+    .acc-content{
+        font-size: 0.7rem;
+    }
+
+    .faq-section {
+        width: 800%;
+        margin: 10px auto;
+  
+    }
+}
+     */
+    
+
+@media screen and (max-width: 1024px) {
+
+    .faq-section h1 {
+       font-size: 22px;
+    }
+    .acc-btn{
+        font-size: 1.1rem;
+        padding: 0.1rem 0.1rem;
+        overflow :auto;
+
+    }
+    .acc-content{
+        font-size: 1rem;
+    }
+
+    .faq-section {
+        width: 80%;
+        margin: 20px auto;
+        padding: 10px;
+    }
+}

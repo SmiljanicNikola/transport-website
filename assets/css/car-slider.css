@@ -1,0 +1,76 @@
+  /* Car Slider */
+  .car-slider {
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.car-slide {
+    display: none;
+}
+
+.car-slide img {
+    vertical-align: middle;
+}
+
+.car-caption {
+    color: #f2f2f2;
+    font-size: 2px;
+    padding: 8px 12px;
+    margin-bottom: 44px;
+    position: absolute;
+    bottom: 16px;
+    font-weight: 800;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.dot {
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.8s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}

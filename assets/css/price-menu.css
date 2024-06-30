@@ -1,0 +1,103 @@
+/* Table Styles */
+.pricing-table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 75px;
+    margin-bottom: 75px;;
+    box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 0.1);     
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pricing-table thead tr th{
+    /* color:black; */
+    font-weight: 400;
+    font-size: 16px;
+    background-color: #0044cc;
+    color: white;
+}
+
+.pricing-table thead tr {
+    background-color: #0044cc;
+    /* background-color: white; */
+    color: white;
+    /* color:black; */
+    text-align: left;
+}
+
+.pricing-table th, .pricing-table td {
+    padding: 12px 15px;
+    border: 1px solid #dddddd;
+    color:black;
+    text-align: center;
+    background-color: white;
+}
+
+.pricing-table tbody tr:nth-child(even) {
+    /* background-color: #333; */
+    background-color: white;
+    color:black;
+}
+
+.pricing-table tbody tr:hover {
+    background-color: lightgray;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+/* Old Responsive Styles */
+/* @media (max-width: 600px) {
+    .pricing-table thead {
+        display: none;
+    }
+
+    .pricing-table, .pricing-table tbody, .pricing-table tr, .pricing-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .pricing-table tr {
+        margin-bottom: 15px;
+    }
+
+    .pricing-table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .pricing-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+} */
+
+
+/* Responsive Table Styling */
+@media (max-width: 600px) {
+    .pricing-table {
+        width: 100%;
+        margin-bottom: 1em;
+        margin-top: 1em;
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    .pricing-table th,
+    .pricing-table td {
+        padding: 0.75em;
+        border: 1px solid #ddd;
+        text-align: center;
+    }
+    .pricing-table th {
+        background-color: #f2f2f2;
+    }
+    .pricing-table tbody tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+}

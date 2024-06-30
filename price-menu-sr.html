@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srki Shuttle - Reliable Airport Shuttle Services</title>
+    <meta name="description" content="Srki Shuttle offers reliable airport shuttle services across Serbia and to neighboring countries. Check our prices for Renault Tracker Van, Mercedes E class, and Skoda Superb.">
+    <meta name="keywords" content="Srki Shuttle, airport shuttle, Serbia shuttle service, transportation service, Renault Tracker Van, Mercedes E class, Skoda Superb">
+    <meta name="author" content="Nikola">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:title" content="Srki Shuttle - Reliable Airport Shuttle Services">
+    <meta property="og:description" content="Srki Shuttle offers reliable airport shuttle services across Serbia and to neighboring countries. Check our prices for Renault Tracker Van, Mercedes E class, and Skoda Superb.">
+    <meta property="og:image" content="https://yourwebsite.com/images/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourwebsite.com">
+    <meta property="twitter:title" content="Srki Shuttle - Reliable Airport Shuttle Services">
+    <meta property="twitter:description" content="Srki Shuttle offers reliable airport shuttle services across Serbia and to neighboring countries. Check our prices for Renault Tracker Van, Mercedes E class, and Skoda Superb.">
+    <meta property="twitter:image" content="https://yourwebsite.com/images/twitter-image.jpg">
+
+    <link rel="stylesheet" href="assets/css/forth2.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/price-menu.css">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Srki Shuttle",
+      "url": "https://yourwebsite.com",
+      "logo": "https://yourwebsite.com/images/logo.png",
+      "description": "Srki Shuttle offers reliable airport shuttle services across Serbia and to neighboring countries.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Your Street Address",
+        "addressLocality": "Your City",
+        "addressRegion": "Your Region",
+        "postalCode": "Your Postal Code",
+        "addressCountry": "Your Country"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+123456789",
+        "contactType": "Customer Service"
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header1">
+        <div class="container-navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="Srki Shuttle Logo">
+            </div>
+            <nav class="navigation">
+                <ul id="ul">
+                    <li><a href="index-sr.html">Početna</a></li>
+                    <li><a href="index-sr.html">Aerodromi</a></li>
+                    <li><a href="index-sr.html">O nama</a></li>
+                    <li><a href="index-sr.html">Vozila</a></li>
+                    <li><a href="index-sr.html">Kontakt</a></li>
+                </ul>
+            </nav>
+            <div class="burger" onclick="toggleNav()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <div class="language-switcher">
+            <a href="price-menu-sr.html"><img src="images/serbia-flag.jpeg" alt="Serbian Flag" class="flag"></a>
+            <a href="price-menu-en.html"><img src="images/english-flag.png" alt="English Flag" class="flag"></a>
+        </div>
+    </header>
+    
+    <table class="pricing-table">
+        <thead>
+            <tr>
+                <th>Relacija</th>
+                <th>Kombi Renault Tracker</th>
+                <th>Mercedes E klasa</th>
+                <th>Škoda Superb</th>
+            </tr>
+        </thead>
+        <tbody id="pricing-tbody">
+            
+        </tbody>
+        <tbody id="pricing-tbody-non-airport">
+        
+        </tbody>
+    </table>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="inner">
+            <h2>Povežite se sa nama</h2>
+            <p>Kontaktirajte nas kad god poželite</p>
+
+            <ul class="icons">
+                <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                <li><a href="https://www.instagram.com/srkiprevoz/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <div class="copyright">
+        Site made by: <a href="#">Nikola</a>.
+    </div>
+
+    <script src="assets/js/car-slider.js"></script>
+    <script src="assets/js/forth.js"></script>
+    <script>
+        function addTableHeader(text) {
+            const tbody = document.getElementById('pricing-tbody-non-airport');
+            const row = document.createElement('tr');
+            const directionCell = document.createElement('td');
+            directionCell.textContent = text;
+            directionCell.style = "background-color:#0044cc; color:white; font-weight:400; border:none;"
+            row.appendChild(directionCell);
+            const vanPriceCell = document.createElement('td');
+            vanPriceCell.textContent = "";
+            vanPriceCell.style = "background-color:#0044cc; border:none;"
+            row.appendChild(vanPriceCell);
+            const mercedesPriceCell = document.createElement('td');
+            mercedesPriceCell.textContent = "";
+            mercedesPriceCell.style = "background-color:#0044cc; border:none;"
+            row.appendChild(mercedesPriceCell);
+            const skodaPriceCell = document.createElement('td');
+            skodaPriceCell.textContent = "";
+            skodaPriceCell.style = "background-color:#0044cc; border:none;"
+            row.appendChild(skodaPriceCell);
+            tbody.appendChild(row);
+        }
+
+        function addPriceRowNonAirport(direction, vanPrice, mercedesPrice, skodaPrice) {
+            const tbody = document.getElementById('pricing-tbody-non-airport');
+            const row = document.createElement('tr');
+            const directionCell = document.createElement('td');
+            directionCell.textContent = direction;
+            row.appendChild(directionCell);
+            const vanPriceCell = document.createElement('td');
+            vanPriceCell.textContent = vanPrice;
+            row.appendChild(vanPriceCell);
+            const mercedesPriceCell = document.createElement('td');
+            mercedesPriceCell.textContent = mercedesPrice;
+            row.appendChild(mercedesPriceCell);
+            const skodaPriceCell = document.createElement('td');
+            skodaPriceCell.textContent = skodaPrice;
+            row.appendChild(skodaPriceCell);
+            tbody.appendChild(row);
+        }
+
+        function addPriceRowAirport(direction, vanPrice, mercedesPrice, skodaPrice) {
+            const tbody = document.getElementById('pricing-tbody');
+            const row = document.createElement('tr');
+            const directionCell = document.createElement('td');
+            directionCell.textContent = direction;
+            row.appendChild(directionCell);
+            const vanPriceCell = document.createElement('td');
+            vanPriceCell.textContent = vanPrice;
+            row.appendChild(vanPriceCell);
+            const mercedesPriceCell = document.createElement('td');
+            mercedesPriceCell.textContent = mercedesPrice;
+            row.appendChild(mercedesPriceCell);
+            const skodaPriceCell = document.createElement('td');
+            skodaPriceCell.textContent = skodaPrice;
+            row.appendChild(skodaPriceCell);
+            tbody.appendChild(row);
+        }
+
+        // Populate the table with data
+        addPriceRowAirport('Novi Sad - Belgrade Airport', '€130', '€60', '€60');
+        addPriceRowAirport('Belgrade Airport - Novi Sad', '€130', '€60', '€60');
+        addPriceRowAirport('Niš - Belgrade Airport', '€150', '€100', '€100');
+        addPriceRowAirport('Belgrade Airport - Niš', '€150', '€100', '€100');
+        addPriceRowAirport('Subotica - Belgrade Airport', '€150', '€90', '€90');
+        addPriceRowAirport('Belgrade Airport - Subotica', '€150', '€90', '€90');
+        addPriceRowAirport('Kikinda - Belgrade Airport', '€70', '€100', '€90');
+        addPriceRowAirport('Belgrade Airport - Kikinda', '€70', '€100', '€90');
+        addPriceRowAirport('Sombor - Belgrade Airport', '€70', '€100', '€90');
+        addPriceRowAirport('Belgrade Airport - Sombor', '€70', '€100', '€90');
+        addPriceRowAirport('Bačka Palanka - Belgrade Airport', '€70', '€100', '€90');
+        addPriceRowAirport('Belgrade Airport - Bačka Palanka', '€70', '€100', '€90');
+
+        addTableHeader('Relacije koje ne uključuju aerodrome (Mesto - mesto)');
+
+        addPriceRowNonAirport('Novi Sad - Niš', '€130', '€160', '€180');
+        addPriceRowNonAirport('Novi Sad - Sombor', '€130', '€160', '€180');
+        addPriceRowNonAirport('Novi Sad - Kikinda', '€130', '€160', '€180');
+        addPriceRowNonAirport('Novi Sad - Subotica', '€130', '€160', '€180');
+        addPriceRowNonAirport('Novi Sad - Kragujevac', '€130', '€160', '€180');
+        addPriceRowNonAirport('Novi Sad - Kruševac', '€130', '€160', '€180');
+        addPriceRowNonAirport('Novi Sad - Zrenjanin', '€130', '€160', '€180');
+        addPriceRowNonAirport('Novi Sad - Leskovac', '€130', '€160', '€180');
+        addPriceRowNonAirport('Novi Sad - Zlatibor', '€130', '€160', '€180');
+        addPriceRowNonAirport('Novi Sad - Valjevo', '€130', '€160', '€180');
+        addPriceRowNonAirport('Novi Sad - Loznica', '€130', '€160', '€180');
+        addPriceRowNonAirport('Novi Sad - Užice', '€130', '€160', '€180');
+        addPriceRowNonAirport('Novi Sad - Negotin', '€130', '€160', '€180');
+        addPriceRowNonAirport('Novi Sad - Zaječar', '€130', '€160', '€180');
+        addPriceRowNonAirport('Novi Sad - Pirot', '€130', '€160', '€180');
+        addPriceRowNonAirport('Novi Sad - Negotin', '€130', '€160', '€180');
+        addPriceRowNonAirport('Novi Sad - Negotin', '€130', '€160', '€180');
+
+        addTableHeader('Relacije izvan Srbije');
+
+        addPriceRowNonAirport('Budimpešta', '€150', '€170', '€180');
+        addPriceRowNonAirport('Prag', '€130', '€160', '€180');
+        addPriceRowNonAirport('Sofija', '€130', '€160', '€180');
+        addPriceRowNonAirport('Bukurešt', '€130', '€160', '€180');
+        addPriceRowNonAirport('Beč', '€130', '€160', '€180');
+        addPriceRowNonAirport('Segedin', '€130', '€160', '€180');
+        addPriceRowNonAirport('Zagreb', '€130', '€160', '€180');
+        addPriceRowNonAirport('Podgorica', '€140', '€170', '€180');
+
+    </script>
+</body>
+</html>
