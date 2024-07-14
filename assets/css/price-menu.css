@@ -46,38 +46,6 @@
     cursor: pointer;
 }
 
-/* Old Responsive Styles */
-/* @media (max-width: 600px) {
-    .pricing-table thead {
-        display: none;
-    }
-
-    .pricing-table, .pricing-table tbody, .pricing-table tr, .pricing-table td {
-        display: block;
-        width: 100%;
-    }
-
-    .pricing-table tr {
-        margin-bottom: 15px;
-    }
-
-    .pricing-table td {
-        text-align: right;
-        padding-left: 50%;
-        position: relative;
-    }
-
-    .pricing-table td::before {
-        content: attr(data-label);
-        position: absolute;
-        left: 0;
-        width: 50%;
-        padding-left: 15px;
-        font-weight: bold;
-        text-align: left;
-    }
-} */
-
 
 /* Responsive Table Styling */
 @media (max-width: 600px) {
