@@ -1,5 +1,5 @@
 .faq-section {
-    width: 70%;
+    width: 80%;
     margin: 50px auto;
     padding: 30px;
     border-radius: 10px;
@@ -109,7 +109,7 @@
         font-size: 24px;
     }
     .acc-btn {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         padding: 0.4rem 1rem;
     }
     .acc-content {
